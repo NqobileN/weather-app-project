@@ -22,7 +22,7 @@ if (currentMinutes < 10) {
 let h5 = document.querySelector("h5");
 h5.innerHTML = `${currentDay}, ${currentHour}:${currentMinutes}`;
 
-function location(event) {
+function handleLocation(event) {
   event.preventDefault();
   let input = document.querySelector("#search-city");
   let city = document.querySelector("h1");
@@ -31,7 +31,7 @@ function location(event) {
 }
 
 let displayName = document.querySelector("#input-location");
-displayName.addEventListener("submit", location);
+displayName.addEventListener("submit", handleLocation);
 
 // Week 5 Homework
 function weatherConditions(response) {
